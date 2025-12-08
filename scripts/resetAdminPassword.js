@@ -1,5 +1,6 @@
 const bcrypt = require("bcrypt");
 const { query } = require("../src/config/database");
+require("dotenv").config();
 
 async function resetAdminPassword() {
   const email = "admin@supermercado.com";

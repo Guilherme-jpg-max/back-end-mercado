@@ -8,14 +8,16 @@
     "dev": "nodemon src/server.js",
     "db:create": "psql -U postgres -f scripts/createTables.sql",
     "db:seed": "psql -U postgres -d supermercado -f scripts/seed.sql",
-    "create-admin": "node scripts/createAdmin.js"
+    "init-db": "node scripts/initDatabase.js",
+    "create-admin": "node scripts/createAdmin.js",
+    "resetAdminPassword": "node scripts/resetAdminPassword.js"
   },
   "keywords": [
     "api",
     "supermercado",
     "ecommerce"
   ],
-  "author": "Seu Nome",
+  "author": "Guilherme",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
