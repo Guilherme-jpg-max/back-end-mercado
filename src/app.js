@@ -14,7 +14,12 @@ app.use(helmet());
 const corsOptions = {
   origin:
     process.env.NODE_ENV === "production"
-      ? [process.env.FRONTEND_URL, process.env.ADMIN_URL]
+      ? [
+          process.env.FRONTEND_URL,
+          process.env.ADMIN_URL,
+          "https://front-and-admin.vercel.app",
+          "https://front-and-admin-umarutaqu-guilhermes-aa8628c1.vercel.app",
+        ]
       : [
           "http://localhost:5173",
           "http://localhost:5174",
@@ -24,7 +29,6 @@ const corsOptions = {
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
-
 app.use(cors(corsOptions));
 
 // Rate limiting global
