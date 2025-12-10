@@ -19,6 +19,7 @@ const corsOptions = {
           process.env.ADMIN_URL,
           "https://front-and-admin.vercel.app",
           "https://front-and-admin-umarutaqu-guilhermes-aa8628c1.vercel.app",
+          "https://projeto-front-mercado.vercel.app",
         ]
       : [
           "http://localhost:5173",
